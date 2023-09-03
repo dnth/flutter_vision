@@ -230,7 +230,7 @@ class _YoloVideoState extends State<YoloVideo> {
         labels: 'assets/labels.txt',
         modelPath: 'assets/yolov8n.tflite',
         modelVersion: "yolov8",
-        numThreads: 2,
+        numThreads: 4,
         useGpu: true);
     setState(() {
       isLoaded = true;
@@ -380,7 +380,7 @@ class _YoloImageState extends State<YoloImage> {
         modelPath: 'assets/yolov8n.tflite',
         modelVersion: "yolov8",
         numThreads: 2,
-        useGpu: true);
+        useGpu: false);
     setState(() {
       isLoaded = true;
     });
@@ -526,7 +526,7 @@ class _TesseractImageState extends State<TesseractImage> {
         'oem': '1',
         'preserve_interword_spaces': '1',
       },
-      language: 'spa',
+      language: 'eng',
     );
     setState(() {
       isLoaded = true;
